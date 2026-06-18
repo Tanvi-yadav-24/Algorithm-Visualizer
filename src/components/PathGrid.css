@@ -1,0 +1,97 @@
+.path-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  user-select: none;
+  cursor: crosshair;
+}
+
+.grid-row {
+  display: flex;
+  gap: 1px;
+}
+
+.grid-cell {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: background-color 0.05s;
+  flex-shrink: 0;
+}
+
+/* Start node */
+.cell--start {
+  background: var(--accent-green) !important;
+  border-color: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+  position: relative;
+}
+.cell--start::after {
+  content: '▶';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #0d1a11;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* End node */
+.cell--end {
+  background: var(--accent-red) !important;
+  border-color: var(--accent-red);
+  box-shadow: 0 0 8px var(--accent-red);
+  position: relative;
+}
+.cell--end::after {
+  content: '◉';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #1a0000;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* Wall */
+.cell--wall {
+  background: #1e2535 !important;
+  border-color: #2a3250;
+  animation: wallIn 0.15s ease forwards;
+}
+
+@keyframes wallIn {
+  0%   { transform: scale(0.4); background: var(--accent-purple); }
+  80%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Visited */
+.cell--visited {
+  animation: visitedIn 0.3s ease forwards;
+}
+
+@keyframes visitedIn {
+  0%   { background: var(--accent-purple); transform: scale(0.3); border-radius: 50%; }
+  50%  { background: #4a3cba; transform: scale(1.1); border-radius: 4px; }
+  100% { background: #2a3580; transform: scale(1); border-radius: 2px; }
+}
+
+/* Path */
+.cell--path {
+  animation: pathIn 0.3s ease forwards;
+}
+
+@keyframes pathIn {
+  0%   { background: var(--accent-yellow); transform: scale(0.6); }
+  60%  { background: var(--accent-yellow); transform: scale(1.15); }
+  100% { background: #c8a000; transform: scale(1); }
+}

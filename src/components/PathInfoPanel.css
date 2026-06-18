@@ -1,0 +1,165 @@
+.path-info-panel {
+  width: 260px;
+  min-width: 260px;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.pip-section {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pip-algo-name {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.pip-fullname {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+}
+
+.pip-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.pip-section-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.pip-props {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pip-prop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pip-prop-label {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.pip-badge {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.pip-badge--green  { background: rgba(57,217,138,0.15); color: var(--accent-green); }
+.pip-badge--red    { background: rgba(255,69,96,0.15);  color: var(--accent-red); }
+.pip-badge--cyan   { background: rgba(0,212,255,0.12);  color: var(--accent-cyan); }
+.pip-badge--muted  { background: var(--bg-card); color: var(--text-muted); }
+
+.pip-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-purple);
+}
+
+.pip-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pip-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pip-stat-val {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.pip-stat-val--purple { color: var(--accent-purple); }
+.pip-stat-val--yellow { color: var(--accent-yellow); }
+
+.pip-stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pip-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.pip-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.pip-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.pip-dot--green   { background: var(--accent-green); }
+.pip-dot--red     { background: var(--accent-red); }
+.pip-dot--wall    { background: #1e2535; border: 1px solid #2a3250; }
+.pip-dot--visited { background: #2a3580; }
+.pip-dot--path    { background: #c8a000; }
+
+.pip-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pip-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.pip-step-num {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
